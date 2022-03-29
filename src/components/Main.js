@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from './form/Form';
+import { v4 as uuidv4 } from 'uuid';
 
 export default class Main extends Component {
   constructor(props) {
@@ -8,6 +9,8 @@ export default class Main extends Component {
       name: '',
       email: '',
       phone: '',
+      titles: [],
+      experiences: [],
     };
   }
 
@@ -30,6 +33,7 @@ export default class Main extends Component {
           onChange={this.onChange}
           onSubmit={this.onSubmit}
         />
+        {/* <Preview /> */}
       </div>
     );
   }

@@ -1,33 +1,21 @@
 import React, { Component } from 'react';
-import InfoInputs from './InfoInputs';
+import GeneralDataForm from './GeneralDataForm';
+import EducationForm from './EducationForm';
 
 export default class Form extends Component {
   render() {
     return (
-      <div className="generalSection">
+      <div className="form">
         <form onSubmit={this.props.onSubmit}>
-          <InfoInputs
-            name="name"
-            type="type"
-            placeholder="Name"
-            onChange={this.props.onChange}
+          <GeneralDataForm
             data={this.props.data}
-          />
-          <InfoInputs
-            name="email"
-            type="email"
-            placeholder="Email"
             onChange={this.props.onChange}
-            data={this.props.data}
           />
-          <InfoInputs
-            name="phone"
-            type="tel"
-            placeholder="Phone"
+          <EducationForm
+            data={this.props.data}
             onChange={this.props.onChange}
-            data={this.props.data}
           />
-          <input type="submit" />
+          <input type="submit" className="btn btn-success" value="Preview" />
         </form>
       </div>
     );

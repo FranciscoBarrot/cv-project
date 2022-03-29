@@ -1,9 +1,0 @@
-.generalSection {
-  border: 1px solid black;
-  width: fit-content;
-}
-
-.generalSection form {
-  display: flex;
-  flex-direction: column;
-}

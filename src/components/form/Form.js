@@ -6,9 +6,27 @@ export default class Form extends Component {
     return (
       <div className="generalSection">
         <form onSubmit={this.props.onSubmit}>
-          <InfoInputs name="Name" type="type" placeholder="Name" />
-          <InfoInputs name="Email" type="email" placeholder="Email" />
-          <InfoInputs name="Phone Number" type="tel" placeholder="Phone" />
+          <InfoInputs
+            name="name"
+            type="type"
+            placeholder="Name"
+            onChange={this.props.onChange}
+            data={this.props.data}
+          />
+          <InfoInputs
+            name="email"
+            type="email"
+            placeholder="Email"
+            onChange={this.props.onChange}
+            data={this.props.data}
+          />
+          <InfoInputs
+            name="phone"
+            type="tel"
+            placeholder="Phone"
+            onChange={this.props.onChange}
+            data={this.props.data}
+          />
           <input type="submit" />
         </form>
       </div>

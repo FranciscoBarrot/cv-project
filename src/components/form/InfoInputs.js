@@ -3,14 +3,13 @@ import React, { Component } from 'react';
 export default class App extends Component {
   render() {
     return (
-      <label>
-        {this.props.text}
-        <input
-          type={this.props.type}
-          name={this.props.name}
-          placeholder={this.props.placeholder}
-        ></input>
-      </label>
+      <input
+        onChange={this.props.onChange}
+        value={this.props.data[this.props.name]}
+        type={this.props.type}
+        placeholder={this.props.placeholder}
+        name={this.props.name}
+      ></input>
     );
   }
 }

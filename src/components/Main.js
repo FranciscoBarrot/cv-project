@@ -17,10 +17,10 @@ export default class Main extends Component {
     });
   };
 
-  onSubmit(e) {
+  onSubmit = (e) => {
     e.preventDefault();
-    console.log('hi');
-  }
+    console.log(this.state);
+  };
 
   render() {
     return (
